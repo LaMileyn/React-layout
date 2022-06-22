@@ -1,0 +1,12 @@
+@import "./variables";
+// обнуление стилей
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  outline: none;
+}
+body{
+  font-family: $fontFamilyMain;
+}
