@@ -3,7 +3,10 @@
 .header {
   position: absolute;
   width: 100%;
-  padding: 36px 0;
+  //height: $headerHeigth;
+  display: flex;
+  padding: 15px 0;
+  align-items: center;
   background: none;
 
   //container
@@ -19,8 +22,10 @@
     .header__logo {
       display: flex;
       align-items: center;
+      color: $whiteColor;
 
       .logo {
+        margin-right: 18px;
         width: 46px;
         height: 46px;
       }
@@ -53,10 +58,10 @@
         background: none;
         width: 138px;
         height: 48px;
-        border: 1px solid $wheatLowColor;
+        border: 1px solid $whiteColor;
         border-radius: $borderRaduisSmall;
         font-size: 14px;
-        color: $wheatLowColor;
+        color: $whiteColor;
         font-weight: 900;
         cursor: pointer;
       }
