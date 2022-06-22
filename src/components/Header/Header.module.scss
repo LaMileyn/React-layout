@@ -1,0 +1,66 @@
+@import "src/styles/variables";
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding: 36px 0;
+  background: none;
+
+  //container
+  &__container {
+    width: $containerWidth;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: space-between;
+
+    // logotype
+    .header__logo {
+      display: flex;
+      align-items: center;
+
+      .logo {
+        width: 46px;
+        height: 46px;
+      }
+    }
+
+    // nav
+    .header__nav {
+      flex: 1;
+
+      .header__links {
+        display: flex;
+        padding: 0 20px;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 600px;
+        justify-content: space-between;
+
+        .header__links {
+          color: $wheatLowColor;
+          font-size: 16px;
+          line-height: 32px;
+          font-weight: 400;
+        }
+      }
+    }
+
+    //btn
+    .header__btn {
+      button {
+        background: none;
+        width: 138px;
+        height: 48px;
+        border: 1px solid $wheatLowColor;
+        border-radius: $borderRaduisSmall;
+        font-size: 14px;
+        color: $wheatLowColor;
+        font-weight: 900;
+        cursor: pointer;
+      }
+    }
+
+  }
+}
