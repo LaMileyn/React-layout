@@ -6,7 +6,13 @@
   margin: 0;
   list-style-type: none;
   outline: none;
+  text-decoration: none;
 }
 body{
   font-family: $fontFamilyMain;
+}
+img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

@@ -18,6 +18,7 @@ root.render(
                     <Route path={"services"} element={<Navigate to={<MainPage/>}/>}/>
                     <Route path={"pricing"} element={<Navigate to={<MainPage/>}/>}/>
                     <Route path={"blog"} element={<Navigate to={<MainPage/>}/>}/>
+                    <Route path={"*"} element={<Navigate to={"Страница не найдена"}/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>
