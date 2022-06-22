@@ -1,0 +1,11 @@
+@import "src/styles/variables";
+
+.main-content {
+  &__container {
+    padding: 85px 0;
+    width: $containerWidth;
+    max-width: 95%;
+    margin: 0 auto;
+  }
+  background-color: $wheatMediumColor;
+}

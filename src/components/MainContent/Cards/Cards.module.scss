@@ -1,0 +1,6 @@
+.cards{
+  padding-top: 75px;
+  display: grid;
+  gap: 47px;
+  grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
+}

@@ -8,16 +8,18 @@ import MainPage from "./pages/MainPage/MainPage";
 import './styles/variables.scss'
 import './styles/main.scss'
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<App/>}>
-                    <Route index element={<MainPage/>}/>
-                    <Route path={"services"} element={<Navigate to={<MainPage/>}/>}/>
-                    <Route path={"pricing"} element={<Navigate to={<MainPage/>}/>}/>
-                    <Route path={"blog"} element={<Navigate to={<MainPage/>}/>}/>
+                    <Route index element={<Navigate to={"main"}/>}/>
+                    <Route path={"main/*"} element={<MainPage/>}/>
+                    <Route path={"services"} element={<Navigate to={'main'}/>}/>
+                    <Route path={"pricing"} element={<Navigate to={'main'}/>}/>
+                    <Route path={"blog"} element={<Navigate to={'main'}/>}/>
                     <Route path={"*"} element={<Navigate to={"Страница не найдена"}/>}/>
                 </Route>
             </Routes>
