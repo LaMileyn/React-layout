@@ -12,12 +12,12 @@ const MainContent = (props) => {
                 <Categorys/>
                 <Outlet/>
                 <Routes>
-                    <Route path="showAll" element={<Cards/>}/>
-                    <Route index element={<Cards/>}/>
-                    <Route path="design" element={<Cards/>}/>
-                    <Route path="branding" element={<Cards/>}/>
-                    <Route path="illustration" element={<Cards/>}/>
-                    <Route path="motion" element={<Cards/>}/>
+                    <Route path="showAll" element={<Cards cardsType={"all"}/>}/>
+                    <Route index element={<Cards cardsType={"all"}/>}/>
+                    <Route path="design" element={<Cards cardsType={"Design"}/>}/>
+                    <Route path="branding" element={<Cards cardsType={"Branding"}/>}/>
+                    <Route path="illustration" element={<Cards cardsType={"Illustration"}/>}/>
+                    <Route path="motion" element={<Cards cardsType={"Motion"}/>}/>
                 </Routes>
             </div>
         </section>
