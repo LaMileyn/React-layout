@@ -49,13 +49,24 @@ const Cards = ({cardsType}) => {
         }
     }
 
-    if (loading) return <div>Loading.......</div>
+    if ( loading && !cards.length ) return <div>Loading.......</div>
 
     return (
         <div className={s.cards}>
             <div className={s.cards__items}>
                 {
-                    cards.map(card => (
+                    loading && cards.length && (
+                        <>
+                            {cards.map(card => (
+                                <Card key={card.id} active={card.id === activeCardId} clickCardHandler={clickCardHandler}
+                                      data={card}/>
+                            ))}
+                            <div>Loading.......</div>
+                        </>
+                    )
+                }
+                {
+                    !loading && cards.map(card => (
                         <Card key={card.id} active={card.id === activeCardId} clickCardHandler={clickCardHandler}
                               data={card}/>
                     ))

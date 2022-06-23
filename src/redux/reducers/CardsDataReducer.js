@@ -44,11 +44,7 @@ export const cardsSlice = createSlice({
             state.error = action.payload
             state.loading = false
         })
-        //    ---------------------- DELETE
-        // builder.addCase(deleteCard.fulfilled, (state,action) =>{
-        //     const id = action.payload
-        //     state.cards = state.cards.filter( card => card.id !== id)
-        // })
+        //    ---------------------- GET
     }
 })
 
