@@ -32,6 +32,7 @@ const Header = (props) => {
                     </div>
                 </div>
             </MediaQuery>
+            {/*---------------------------------------*/}
             <MediaQuery maxWidth={1040}>
                 <div className={s['header__contaner-small-devices']}>
                     <div className={s.header__logo}>
