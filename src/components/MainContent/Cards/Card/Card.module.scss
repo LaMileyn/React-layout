@@ -1,8 +1,13 @@
 @import "src/styles/variables";
 .card{
   position: relative;
+  cursor: pointer;
   height: 410px;
   border-radius: $borderRaduisSmall;
+
+  &.active{
+    border: 5px solid $greenColor;
+  }
   &__image{
     position: absolute;
     top: 0;

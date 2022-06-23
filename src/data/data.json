@@ -1,46 +1,40 @@
 {
-  "cards" : [
+  "cards": [
     {
       "id": 1,
       "category": "Design",
-      "name": "SOFA",
+      "name": "SOFA1",
       "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
     },
     {
       "id": 2,
-      "category": "Branding",
-      "name": "KEYBOARD",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 3,
-      "category": "Illustration",
-      "name": "Work Media",
+      "category": "Design",
+      "name": "SOFA2",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
       "id": 4,
-      "category": "Motion",
-      "name": "DDDone",
+      "category": "Design",
+      "name": "SOFA4",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
       "id": 5,
       "category": "Design",
-      "name": "Abstrack",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
+      "name": "SOFA5",
+      "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
     },
     {
       "id": 6,
-      "category": "Branding",
-      "name": "HandP",
+      "category": "Design",
+      "name": "SOFA6",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
       "id": 7,
-      "category": "Motion",
-      "name": "Architect",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
+      "category": "Branding",
+      "name": "SOFA",
+      "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
     },
     {
       "id": 8,
@@ -93,7 +87,7 @@
     {
       "id": 16,
       "category": "Design",
-      "name": "Sport",
+      "name": "NotTheDel",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
@@ -110,4 +104,3 @@
     }
   ]
 }
-

@@ -8,24 +8,26 @@ import MediaQuery from 'react-responsive'
 const Categorys = (props) => {
 
 
-    const {} = useSelector( state => state.cards )
-    const navigate = useNavigate()
+    // const {} = useSelector( state => state.cards )
+    // const navigate = useNavigate()
+
     // текущее состояние селекта
-    const [category, setCategory] = useState("showAll")
+    // const [category, setCategory] = useState("all")
     // текущее состояние селекта
-    console.log(category)
+
     // возможные категории
     const categorys = [
-        {link: "showAll", displayName: "Show All"},
-        {link: "design", displayName: "Design"},
-        {link: "branding", displayName: "Branding"},
-        {link: "illustration", displayName: "Illustration"},
-        {link: "motion", displayName: "Motion"},
+        {link: "all", displayName: "Show All"},
+        {link: "Design", displayName: "Design"},
+        {link: "Branding", displayName: "Branding"},
+        {link: "Illustration", displayName: "Illustration"},
+        {link: "Motion", displayName: "Motion"},
     ]
     // возможные категории
-    useEffect( () => {
-        navigate(category)
-    },[category])
+
+    // useEffect( () => {
+    //     navigate(category)
+    // },[category])
 
     const dispatch = useDispatch()
     const checkActiveLink = ({isActive}) => isActive ? cn(s.categorys__link, s.link__active) : s.categorys__link
@@ -47,7 +49,7 @@ const Categorys = (props) => {
             {/*----------------------------------------------*/}
             <MediaQuery maxWidth={1040}>
                 <div>
-                    <select onChange={ e => setCategory(e.target.value)} name="links" id="links-select" className={s.categorys__select}>
+                    <select name="links" id="links-select" className={s.categorys__select}>
                         {
                             categorys.map(({link, displayName}) => (
                                 <option value={link}>{displayName}</option>
