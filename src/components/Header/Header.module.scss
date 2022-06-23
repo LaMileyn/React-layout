@@ -18,19 +18,7 @@
     margin: 0 auto;
     justify-content: space-between;
 
-    // logotype
-    .header__logo {
-      display: flex;
-      align-items: center;
-      color: $whiteColor;
 
-      .logo {
-        margin-right: 18px;
-        position: relative;
-        width: 46px;
-        height: 46px;
-      }
-    }
 
     // nav
     .header__nav {
@@ -68,5 +56,27 @@
       }
     }
 
+  }
+  // logotype
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: $whiteColor;
+
+    .logo {
+      margin-right: 18px;
+      position: relative;
+      width: 46px;
+      height: 46px;
+    }
+  }
+  // container small devices
+  &__contaner-small-devices{
+    width: $containerWidth;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
   }
 }
