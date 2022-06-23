@@ -13,5 +13,8 @@ export class CardsApi {
             : `/cards?category=${category}&_page=${page}&_limit=6`
         return await request.get(url)
     }
+    static async deleteCard(id){
+        return await request.delete(`/cards/${id}`)
+    }
 }
 

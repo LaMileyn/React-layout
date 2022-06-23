@@ -11,16 +11,16 @@ const Categorys = (props) => {
     const {} = useSelector( state => state.cards )
     const navigate = useNavigate()
     // текущее состояние селекта
-    const [category, setCategory] = useState("showAll")
+    const [category, setCategory] = useState("all")
     // текущее состояние селекта
     console.log(category)
     // возможные категории
     const categorys = [
-        {link: "showAll", displayName: "Show All"},
-        {link: "design", displayName: "Design"},
-        {link: "branding", displayName: "Branding"},
-        {link: "illustration", displayName: "Illustration"},
-        {link: "motion", displayName: "Motion"},
+        {link: "all", displayName: "Show All"},
+        {link: "Design", displayName: "Design"},
+        {link: "Branding", displayName: "Branding"},
+        {link: "Illustration", displayName: "Illustration"},
+        {link: "Motion", displayName: "Motion"},
     ]
     // возможные категории
     useEffect( () => {

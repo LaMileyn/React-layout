@@ -1,5 +1,5 @@
 {
-  "cards" : [
+  "cards": [
     {
       "id": 1,
       "category": "Design",
@@ -93,7 +93,7 @@
     {
       "id": 16,
       "category": "Design",
-      "name": "Sport",
+      "name": "NotTheDel",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
@@ -110,4 +110,3 @@
     }
   ]
 }
-
