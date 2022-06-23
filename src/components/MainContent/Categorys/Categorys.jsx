@@ -7,6 +7,7 @@ import {changeCurrentPage} from "../../../redux/reducers/CardsDataReducer";
 
 const Categorys = (props) => {
     const dispatch = useDispatch()
+    const checkActiveLink = ({isActive}) => isActive ? cn(s.categorys__link, s.link__active) : s.categorys__link
     return (
         <div className={s.categorys}>
             <div className={s.categorys__links}>

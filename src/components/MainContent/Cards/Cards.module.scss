@@ -1,14 +1,11 @@
 @import "src/styles/variables";
 
 .cards{
-
   &__items{
-    padding-top: 75px;
     display: grid;
     gap: 47px;
     grid-template-columns: repeat(auto-fill,minmax(330px,1fr));
   }
-
   &__btn{
     margin-top: 80px;
     text-align: center;
