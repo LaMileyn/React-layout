@@ -1,19 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import s from './Categorys.module.scss'
-import {Link, NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import cn from 'classnames'
-import {useDispatch, useSelector} from "react-redux";
+import {useSelector} from "react-redux";
 import MediaQuery from 'react-responsive'
 
 const Categorys = (props) => {
 
-
-    // const {} = useSelector( state => state.cards )
-    // const navigate = useNavigate()
-
-    // текущее состояние селекта
-    // const [category, setCategory] = useState("all")
-    // текущее состояние селекта
+    const { currentCategory } = useSelector( state => state.cards )
+    const navigate = useNavigate()
 
     // возможные категории
     const categorys = [
@@ -25,11 +20,10 @@ const Categorys = (props) => {
     ]
     // возможные категории
 
-    // useEffect( () => {
-    //     navigate(category)
-    // },[category])
+    const selectChangeController = (value) =>{
+        navigate(value)
+    }
 
-    const dispatch = useDispatch()
     const checkActiveLink = ({isActive}) => isActive ? cn(s.categorys__link, s.link__active) : s.categorys__link
     return (
         <div className={s.categorys}>
@@ -49,7 +43,10 @@ const Categorys = (props) => {
             {/*----------------------------------------------*/}
             <MediaQuery maxWidth={1040}>
                 <div>
-                    <select name="links" id="links-select" className={s.categorys__select}>
+                    <select onChange={ (e) => selectChangeController(e.target.value)}
+                            value={currentCategory}
+                            name="links" id="links-select" className={s.categorys__select}
+                    >
                         {
                             categorys.map(({link, displayName}) => (
                                 <option value={link}>{displayName}</option>
