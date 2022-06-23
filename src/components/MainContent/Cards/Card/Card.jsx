@@ -7,9 +7,10 @@ import cn from 'classnames'
 const Card = ({ data, active, clickCardHandler }) => {
 
     return (
-        <div className={cn(s.card, { [s.active] : active })} onClick={ () => clickCardHandler(data.id)}>
+        <div className={cn(s.card, { [s.active] : active })}>
             <div className={s.card__image}>
                 <img
+                    onClick={ () => clickCardHandler(data.id)}
                     src={data.image}
                     alt=""/>
             </div>
