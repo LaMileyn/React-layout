@@ -1,11 +1,13 @@
 import React from 'react';
 import s from './Card.module.scss';
 import {Link} from "react-router-dom";
+import cn from 'classnames'
 
 
-const Card = ({ data }) => {
+const Card = ({ data, active, clickCardHandler }) => {
+
     return (
-        <div className={s.card}>
+        <div className={cn(s.card, { [s.active] : active })} onClick={ () => clickCardHandler(data.id)}>
             <div className={s.card__image}>
                 <img
                     src={data.image}

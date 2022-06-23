@@ -1,5 +1,6 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
 import {CardsApi} from "../../../api/axios_instance";
+import {cardDeletion} from "../../reducers/CardsDataReducer";
 
 // получение порции данных о конкретной категории карточек
 export const fetchCardsData = createAsyncThunk(
@@ -22,7 +23,7 @@ export const deleteCard = createAsyncThunk(
     async (id, { dispatch }) => {
        try{
            await CardsApi.deleteCard(id)
-           dispatch(deleteCard(id))
+           dispatch(cardDeletion(id))
        }catch(e){
            console.log(e)
        }

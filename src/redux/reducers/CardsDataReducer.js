@@ -17,7 +17,7 @@ export const cardsSlice = createSlice({
         changeCurrentPage: (state) => {
             state.currentPage = 0
         },
-        deleteCard : (state,{ id }) =>{
+        cardDeletion : (state,{ id }) =>{
             state.cards= state.cards.filter( card => card.id !== id)
         }
     },
@@ -45,6 +45,6 @@ export const cardsSlice = createSlice({
     }
 })
 
-export const {getCards, changeCurrentPage} = cardsSlice.actions
+export const {getCards, changeCurrentPage, cardDeletion} = cardsSlice.actions
 
 export default cardsSlice.reducer
