@@ -7,10 +7,10 @@ import {getCards} from "./redux/reducers/CardsDataReducer";
 
 const App = () => {
 
-    const dispatch = useDispatch()
-    useEffect( () =>{
-        dispatch(getCards())
-    },[])
+    // const dispatch = useDispatch()
+    // useEffect( () =>{
+    //     dispatch(getCards())
+    // },[])
 
 
     return (

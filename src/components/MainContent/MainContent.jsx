@@ -2,7 +2,7 @@ import React from 'react';
 import s from './MainContent.module.scss'
 import Categorys from "./Categorys/Categorys";
 import Cards from "./Cards/Cards";
-import {Outlet, Route, Routes} from "react-router-dom";
+import {Outlet, Route, Routes, Navigate} from "react-router-dom";
 
 
 const MainContent = (props) => {
@@ -12,6 +12,7 @@ const MainContent = (props) => {
                 <Categorys/>
                 <Outlet/>
                 <Routes>
+                    <Route index element={<Navigate to = {`showAll`}/>}/>
                     <Route path="showAll" element={<Cards cardsType={"all"}/>}/>
                     <Route index element={<Cards cardsType={"all"}/>}/>
                     <Route path="design" element={<Cards cardsType={"Design"}/>}/>

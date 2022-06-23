@@ -1,26 +1,39 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import s from './Cards.module.scss';
 import Card from "./Card/Card";
-import {useSelector} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
+import {fetchCardsData} from "../../../redux/actions/CardsActions/CardsData";
 
 const Cards = ({cardsType}) => {
-    const {cards} = useSelector(state => state.cards)
+
+    const {cards, totalCardsCount, loading} = useSelector(state => state.cards)
+    const dispatch = useDispatch()
+    // получение основной порции карточек
+    useEffect(() => {
+        dispatch(fetchCardsData(cardsType))
+    }, [dispatch, cardsType])
+    // load more cards
+    const getMoreCards = () => {
+        dispatch(fetchCardsData(cardsType))
+    }
+
+    if (loading) return <div>....Loading.......</div>
+
     return (
         <div className={s.cards}>
+            <div className={s.cards__items}>
+                {
+                    cards.map(card => (
+                        <Card key={card.id} data={card}/>
+                    ))
+                }
+            </div>
             {
-                cardsType === "all"
-                    ? (
-                        cards.map(card => (
-                            <Card key={card.id} data={card}/>
-                        ))
-                    )
-                    : (
-                        cards?.filter(el => el.category === cardsType)
-                            .map(card => (
-                                <Card key={card.id} data={card}/>
-                            ))
-                    )
-
+                cards.length < totalCardsCount && (
+                    <div className={s.cards__btn}>
+                        <button onClick={getMoreCards}>LOAD MORE</button>
+                    </div>
+                )
             }
         </div>
     );
