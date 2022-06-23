@@ -7,8 +7,12 @@ export const request = axios.create({
 
 // получение данных о карточках
 export class CardsApi {
-    static async getCards(category){
-        return await request.get(`/cards?category=${category}`)
+    static async getCards(category,page){
+        const url = category === "all"
+            ? `/cards?_page=${page}&_limit=6`
+            : `/cards?category=${category}&_page=${page}&_limit=6`
+        console.log(url)
+        return await request.get(url)
     }
 }
 
