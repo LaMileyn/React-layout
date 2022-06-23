@@ -9,8 +9,8 @@ export const cardsSlice = createSlice({
     name: 'cards',
     initialState,
     reducers: {
-        getCards : (state) => {
-            state.cards = [...jsonData]
+        getCards : (state,action) => {
+            state.cards.push(action.payload)
         },
 
     },
