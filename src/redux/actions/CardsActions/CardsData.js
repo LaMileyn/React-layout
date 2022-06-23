@@ -22,6 +22,7 @@ export const deleteCard = createAsyncThunk(
     "cards/deletePortion",
     async (id, { dispatch }) => {
        try{
+           console.log(id)
            const data = CardsApi.deleteCard(id)
            return id
        }catch(e){

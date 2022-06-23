@@ -8,16 +8,33 @@ import {changeCurrentPage} from "../../../redux/reducers/CardsDataReducer";
 const Cards = ({cardsType}) => {
 
 
-    const [activeCardId,setActiveCardId] = useState(null)
+    const [activeCardId, setActiveCardId] = useState(null)
     const {cards, totalCardsCount, loading} = useSelector(state => state.cards)
     const dispatch = useDispatch()
 
-    // console.log(cards)
+
     // получение основной порции карточек
     useEffect(() => {
         dispatch(changeCurrentPage())
         dispatch(fetchCardsData(cardsType))
     }, [dispatch, cardsType])
+
+    // при нажатии DEL удалить карточку
+    useEffect(() => {
+        const keyDownHandler = (event) => {
+            if (activeCardId) {
+                if (event.code === "Delete") {
+                    dispatch(deleteCard(activeCardId))
+                    setActiveCardId(null)
+                }
+                if (event.code === "Escape") {
+                    setActiveCardId(null)
+                }
+            }
+        }
+        document.addEventListener("keydown", keyDownHandler)
+        return () => document.removeEventListener("keydown", keyDownHandler)
+    }, [activeCardId])
 
     // load more cards
     const getMoreCards = () => {
@@ -25,9 +42,11 @@ const Cards = ({cardsType}) => {
     }
 
     //click card handler
-    const clickCardHandler = (id) =>{
-        if ( id === activeCardId ) dispatch(deleteCard(id))
-        else setActiveCardId(id)
+    const clickCardHandler = (id) => {
+        if (id === activeCardId) setActiveCardId(null)
+        else {
+            setActiveCardId(id)
+        }
     }
 
     if (loading) return <div>Loading.......</div>
@@ -37,7 +56,8 @@ const Cards = ({cardsType}) => {
             <div className={s.cards__items}>
                 {
                     cards.map(card => (
-                        <Card key={card.id} active={card.id === activeCardId} clickCardHandler ={clickCardHandler}  data={card}/>
+                        <Card key={card.id} active={card.id === activeCardId} clickCardHandler={clickCardHandler}
+                              data={card}/>
                     ))
                 }
             </div>

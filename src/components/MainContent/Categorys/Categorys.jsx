@@ -42,7 +42,7 @@ const Categorys = (props) => {
             </MediaQuery>
             {/*----------------------------------------------*/}
             <MediaQuery maxWidth={1040}>
-                <div>
+                <div className={s.select__container}>
                     <select onChange={ (e) => selectChangeController(e.target.value)}
                             value={currentCategory}
                             name="links" id="links-select" className={s.categorys__select}
