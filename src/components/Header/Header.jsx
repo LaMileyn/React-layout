@@ -8,6 +8,7 @@ const Header = (props) => {
     return (
         <div className={s.header}>
             <MediaQuery minWidth={1041}>
+
                 <div className={s.header__container}>
                     <div className={s.header__logo}>
                         <div className={s.logo}>
