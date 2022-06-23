@@ -3,7 +3,6 @@
 .header {
   position: absolute;
   width: 100%;
-  //height: $headerHeigth;
   display: flex;
   padding: 15px 0;
   align-items: center;
@@ -18,19 +17,7 @@
     margin: 0 auto;
     justify-content: space-between;
 
-    // logotype
-    .header__logo {
-      display: flex;
-      align-items: center;
-      color: $whiteColor;
 
-      .logo {
-        margin-right: 18px;
-        position: relative;
-        width: 46px;
-        height: 46px;
-      }
-    }
 
     // nav
     .header__nav {
@@ -41,7 +28,7 @@
         padding: 0 20px;
         width: 100%;
         margin: 0 auto;
-        max-width: 600px;
+        max-width: 556px;
         justify-content: space-between;
 
         .header__links {
@@ -68,5 +55,27 @@
       }
     }
 
+  }
+  // logotype
+  &__logo {
+    display: flex;
+    align-items: center;
+    color: $whiteColor;
+
+    .logo {
+      margin-right: 18px;
+      position: relative;
+      width: 46px;
+      height: 46px;
+    }
+  }
+  // container small devices
+  &__contaner-small-devices{
+    width: $containerWidth;
+    max-width: 95%;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+    justify-content: center;
   }
 }
