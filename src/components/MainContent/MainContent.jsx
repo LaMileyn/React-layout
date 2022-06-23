@@ -10,11 +10,12 @@ const MainContent = (props) => {
         <section className={s['main-content']}>
             <div className={s['main-content__container']}>
                 <Categorys/>
-                <Outlet/>
+                <div className={s['main-content__grid']}>
+                    <Outlet/>
+                </div>
                 <Routes>
-                    <Route index element={<Navigate to = {`showAll`}/>}/>
-                    <Route path="showAll" element={<Cards cardsType={"all"}/>}/>
                     <Route index element={<Cards cardsType={"all"}/>}/>
+                    <Route path="showAll" element={<Cards cardsType={"all"}/>}/>
                     <Route path="design" element={<Cards cardsType={"Design"}/>}/>
                     <Route path="branding" element={<Cards cardsType={"Branding"}/>}/>
                     <Route path="illustration" element={<Cards cardsType={"Illustration"}/>}/>

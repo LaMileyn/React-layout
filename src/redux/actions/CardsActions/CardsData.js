@@ -9,6 +9,6 @@ export const fetchCardsData = createAsyncThunk(
             // cards - state карточек
         const { cards } = api.getState()
         const response = await CardsApi.getCards(category,cards.currentPage + 1)
-        return response
+        return { response, category }
     }
 )
