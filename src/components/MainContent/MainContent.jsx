@@ -14,7 +14,7 @@ const MainContent = (props) => {
                     <Outlet/>
                 </div>
                 <Routes>
-                    <Route index element={<Cards cardsType={"all"}/>}/>
+                    <Route index element={<Navigate to={`all`}/>}/>
                     <Route path="all" element={<Cards cardsType={"all"}/>}/>
                     <Route path="Design" element={<Cards cardsType={"Design"}/>}/>
                     <Route path="Branding" element={<Cards cardsType={"Branding"}/>}/>
