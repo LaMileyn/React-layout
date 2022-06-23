@@ -7,28 +7,10 @@
       "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
     },
     {
-      "id": 2,
-      "category": "Design",
-      "name": "SOFA2",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 3,
-      "category": "Design",
-      "name": "SOFA3",
-      "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
-    },
-    {
       "id": 4,
       "category": "Design",
       "name": "SOFA4",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 5,
-      "category": "Design",
-      "name": "SOFA5",
-      "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
     },
     {
       "id": 6,
@@ -37,21 +19,9 @@
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
-      "id": 7,
-      "category": "Branding",
-      "name": "SOFA",
-      "image": "https://catherineasquithgallery.com/uploads/posts/2021-03/1614625681_2-p-foni-dlya-fotoshopa-teksturi-2.jpg"
-    },
-    {
       "id": 8,
       "category": "Design",
       "name": "CalC",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 9,
-      "category": "Branding",
-      "name": "Sport",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
@@ -64,18 +34,6 @@
       "id": 11,
       "category": "Illustration",
       "name": "Sassqex",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 12,
-      "category": "Branding",
-      "name": "SPART",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 13,
-      "category": "Motion",
-      "name": "Architect",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     },
     {
@@ -94,18 +52,6 @@
       "id": 16,
       "category": "Design",
       "name": "NotTheDel",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 17,
-      "category": "Branding",
-      "name": "SSQRT",
-      "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
-    },
-    {
-      "id": 18,
-      "category": "Motion",
-      "name": "Dasada",
       "image": "https://cs2.livemaster.ru/storage/6a/48/cc2504083605f0aa3ea325452dka--kartiny-i-panno-kartina-akrilom-na-holste-abstraktsiya-80-80-.jpg"
     }
   ]

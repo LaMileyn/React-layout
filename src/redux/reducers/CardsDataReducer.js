@@ -17,9 +17,9 @@ export const cardsSlice = createSlice({
         changeCurrentPage: (state) => {
             state.currentPage = 0
         },
-        cardDeletion : (state,{ id }) =>{
-            state.cards= state.cards.filter( card => card.id !== id)
-            console.log(state.cards)
+        cardDeletion : (state,action) =>{
+            const id = action.payload
+            state.cards = state.cards.filter( card => card.id !== id)
         }
     },
     extraReducers: (builder) => {
@@ -45,10 +45,10 @@ export const cardsSlice = createSlice({
             state.loading = false
         })
         //    ---------------------- DELETE
-        builder.addCase(deleteCard.fulfilled, (state,action) =>{
-            const id = action.payload
-            state.cards = state.cards.filter( card => card.id !== id)
-        })
+        // builder.addCase(deleteCard.fulfilled, (state,action) =>{
+        //     const id = action.payload
+        //     state.cards = state.cards.filter( card => card.id !== id)
+        // })
     }
 })
 
