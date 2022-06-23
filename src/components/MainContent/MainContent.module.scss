@@ -7,9 +7,10 @@
     max-width: 95%;
     margin: 0 auto;
 
-    .main-content__grid{
-      padding-top: 75px;
-    }
+
+  }
+  &__grid{
+    padding-top: 75px;
   }
   background-color: $wheatMediumColor;
 }

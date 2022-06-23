@@ -17,45 +17,43 @@
     margin: 0 auto;
     justify-content: space-between;
 
+  }
+  // nav
+  &__nav {
+    flex: 1;
 
-
-    // nav
-    .header__nav {
-      flex: 1;
+    .header__links {
+      display: flex;
+      padding: 0 20px;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 556px;
+      justify-content: space-between;
 
       .header__links {
-        display: flex;
-        padding: 0 20px;
-        width: 100%;
-        margin: 0 auto;
-        max-width: 556px;
-        justify-content: space-between;
-
-        .header__links {
-          color: $wheatLowColor;
-          font-size: 16px;
-          line-height: 32px;
-          font-weight: 400;
-        }
+        color: $wheatLowColor;
+        font-size: 16px;
+        line-height: 32px;
+        font-weight: 400;
       }
     }
-
-    //btn
-    .header__btn {
-      button {
-        background: none;
-        width: 138px;
-        height: 48px;
-        border: 1px solid $whiteColor;
-        border-radius: $borderRaduisSmall;
-        font-size: 14px;
-        color: $whiteColor;
-        font-weight: 900;
-        cursor: pointer;
-      }
-    }
-
   }
+
+  //btn
+  &__btn {
+    button {
+      background: none;
+      width: 138px;
+      height: 48px;
+      border: 1px solid $whiteColor;
+      border-radius: $borderRaduisSmall;
+      font-size: 14px;
+      color: $whiteColor;
+      font-weight: 900;
+      cursor: pointer;
+    }
+  }
+
   // logotype
   &__logo {
     display: flex;
