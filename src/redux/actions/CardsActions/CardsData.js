@@ -6,14 +6,14 @@ import {cardDeletion} from "../../reducers/CardsDataReducer";
 // получение порции данных о конкретной категории карточек
 export const fetchCardsData = createAsyncThunk(
     "cards/fetchPortion",
-    async (category = "all", api) => {
+    async (category = "all", { getState, rejectWithValue}) => {
         try {
             // cards - state карточек
-            const { cards } = api.getState()
+            const { cards } = getState()
             const response = await CardsApi.getCards(category, cards.currentPage + 1)
             return {response, category}
         } catch (e) {
-            console.log(e)
+            return rejectWithValue(e.message)
         }
 
     }
@@ -21,14 +21,14 @@ export const fetchCardsData = createAsyncThunk(
 // удаление конкретной карточки
 export const deleteCard = createAsyncThunk(
     "cards/deletePortion",
-    async (id, { dispatch,getState }) => {
+    async (id, { dispatch,getState, rejectWithValue }) => {
        try {
            await CardsApi.deleteCard(id)
            dispatch(cardDeletion(id))
            const { cards } = getState()
            dispatch(fetchCardsData(cards.currentCategory, cards.currentPage))
        } catch(e){
-           console.log(e)
+           return rejectWithValue(e.message)
        }
 
     }
