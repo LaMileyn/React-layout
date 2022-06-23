@@ -11,7 +11,6 @@ export class CardsApi {
         const url = category === "all"
             ? `/cards?_page=${page}&_limit=6`
             : `/cards?category=${category}&_page=${page}&_limit=6`
-        console.log(url)
         return await request.get(url)
     }
 }
