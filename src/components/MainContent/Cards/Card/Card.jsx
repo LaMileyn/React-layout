@@ -12,7 +12,7 @@ const Card = ({ data }) => {
                     alt=""/>
             </div>
             <div className={s.card__text}>
-                <Link className={s.card__link} to={"design"}>{data.category}</Link>
+                <Link className={s.card__link} to={`/main/${data.category.toLowerCase()}`}>{data.category}</Link>
                 <h2>{data.name}</h2>
             </div>
         </div>
