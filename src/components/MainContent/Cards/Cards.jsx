@@ -9,6 +9,7 @@ const Cards = ({cardsType}) => {
 
     const {cards, totalCardsCount, loading} = useSelector(state => state.cards)
     const dispatch = useDispatch()
+    console.log(cards)
     // получение основной порции карточек
     useEffect(() => {
         dispatch(changeCurrentPage())

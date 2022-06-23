@@ -1,40 +1,47 @@
-import { createSlice } from '@reduxjs/toolkit'
-import jsonData from './../../data/data.json'
+import {createSlice} from '@reduxjs/toolkit'
 import {fetchCardsData} from "../actions/CardsActions/CardsData";
 
 const initialState = {
     cards: [],
-    currentPage : 0,
-    loading : false,
-    totalCardsCount : 0,
-    error : ""
+    currentPage: 0,
+    loading: false,
+    totalCardsCount: 0,
+    currentCategory: "all",
+    error: ""
 }
 
 export const cardsSlice = createSlice({
     name: 'cards',
     initialState,
     reducers: {
-        changeCurrentPage : (state) =>{
+        changeCurrentPage: (state) => {
             state.currentPage = 0
         }
     },
-    extraReducers : (builder) =>{
-        builder.addCase(fetchCardsData.pending, (state,action) =>{
+    extraReducers: (builder) => {
+        builder.addCase(fetchCardsData.pending, (state, action) => {
             state.loading = true
         })
-        builder.addCase(fetchCardsData.fulfilled, (state,action) =>{
-            state.cards = state.cards.concat(action.payload.data)
-            state.totalCardsCount = action.payload.headers['x-total-count']
+        builder.addCase(fetchCardsData.fulfilled, (state, { payload : { category, response}}) => {
+            if (category === state.currentCategory) {
+                // если категории одинаковые,то добавляем данные в массив
+                state.cards = state.cards.concat(response.data)
+            } else {
+                // если категории разные --> пересоздаем на новый массив
+                state.cards = response.data
+            }
+            state.currentCategory = category
+            state.totalCardsCount = response.headers['x-total-count']
             state.currentPage++
             state.loading = false
         })
-        builder.addCase(fetchCardsData.rejected, (state,action) =>{
+        builder.addCase(fetchCardsData.rejected, (state, action) => {
             state.error = action.payload
             state.loading = false
         })
     }
 })
 
-export const {  getCards, changeCurrentPage  } = cardsSlice.actions
+export const {getCards, changeCurrentPage} = cardsSlice.actions
 
 export default cardsSlice.reducer
