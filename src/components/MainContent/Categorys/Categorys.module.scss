@@ -9,30 +9,28 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .categorys__link{
-      color: $brownColor;
-      font-size: 16px;
-      font-weight: 400;
 
-    }
     .link__active{
       color: $greenColor;
     }
-
   }
-
+  &__link{
+    color: $brownColor;
+    font-size: 16px;
+    font-weight: 400;
+  }
   &__select{
     position: relative;
-
+    appearance: none;
     width: 329px;
     height: 48px;
     max-width: 100%;
     border-radius: $borderRaduisSmall;
     padding: 0 18px;
-    border: none;
-    &:active{
-      border: 1px solid #f3d1bf;
-    }
+    border: 1px solid #f3d1bf;
+    background: url("./../../../assets/icons/Triangle.svg") no-repeat right;
+    background-color: $whiteColor;
+    background-position-x: calc(100% - 13px);
   }
 }
 
